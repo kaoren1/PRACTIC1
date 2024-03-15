@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище PRACTIC1Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Assigments">
+          <Key>
+            <PropertyRef Name="ID_Assigment" />
+          </Key>
+          <Property Name="ID_Assigment" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Employee_ID" Type="int" Nullable="false" />
+          <Property Name="Project_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="ID_Employee" />
+          </Key>
+          <Property Name="ID_Employee" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name1" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="Surname" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="Position" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="Department" Type="varchar" MaxLength="60" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Projects">
+          <Key>
+            <PropertyRef Name="ID_Project" />
+          </Key>
+          <Property Name="ID_Project" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="Dedcription" Type="text" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Assigment__Emplo__4D94879B">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+          <End Role="Assigments" Type="Self.Assigments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="ID_Employee" />
+            </Principal>
+            <Dependent Role="Assigments">
+              <PropertyRef Name="Employee_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Assigment__Proje__4E88ABD4">
+          <End Role="Projects" Type="Self.Projects" Multiplicity="1" />
+          <End Role="Assigments" Type="Self.Assigments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Projects">
+              <PropertyRef Name="ID_Project" />
+            </Principal>
+            <Dependent Role="Assigments">
+              <PropertyRef Name="Project_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище PRACTIC1ModelContainer">
+          <EntitySet Name="Assigments" EntityType="Self.Assigments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Projects" EntityType="Self.Projects" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Assigment__Emplo__4D94879B" Association="Self.FK__Assigment__Emplo__4D94879B">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Assigments" EntitySet="Assigments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Assigment__Proje__4E88ABD4" Association="Self.FK__Assigment__Proje__4E88ABD4">
+            <End Role="Projects" EntitySet="Projects" />
+            <End Role="Assigments" EntitySet="Assigments" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PRACTIC1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Assigments">
+          <Key>
+            <PropertyRef Name="ID_Assigment" />
+          </Key>
+          <Property Name="ID_Assigment" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Employee_ID" Type="Int32" Nullable="false" />
+          <Property Name="Project_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Employees" Relationship="Self.FK__Assigment__Emplo__4D94879B" FromRole="Assigments" ToRole="Employees" />
+          <NavigationProperty Name="Projects" Relationship="Self.FK__Assigment__Proje__4E88ABD4" FromRole="Assigments" ToRole="Projects" />
+        </EntityType>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="ID_Employee" />
+          </Key>
+          <Property Name="ID_Employee" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name1" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Surname" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Position" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Department" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Assigments" Relationship="Self.FK__Assigment__Emplo__4D94879B" FromRole="Employees" ToRole="Assigments" />
+        </EntityType>
+        <EntityType Name="Projects">
+          <Key>
+            <PropertyRef Name="ID_Project" />
+          </Key>
+          <Property Name="ID_Project" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Dedcription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Assigments" Relationship="Self.FK__Assigment__Proje__4E88ABD4" FromRole="Projects" ToRole="Assigments" />
+        </EntityType>
+        <Association Name="FK__Assigment__Emplo__4D94879B">
+          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+          <End Role="Assigments" Type="Self.Assigments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="ID_Employee" />
+            </Principal>
+            <Dependent Role="Assigments">
+              <PropertyRef Name="Employee_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Assigment__Proje__4E88ABD4">
+          <End Role="Projects" Type="Self.Projects" Multiplicity="1" />
+          <End Role="Assigments" Type="Self.Assigments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Projects">
+              <PropertyRef Name="ID_Project" />
+            </Principal>
+            <Dependent Role="Assigments">
+              <PropertyRef Name="Project_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PRACTIC1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Assigments" EntityType="Self.Assigments" />
+          <EntitySet Name="Employees" EntityType="Self.Employees" />
+          <EntitySet Name="Projects" EntityType="Self.Projects" />
+          <AssociationSet Name="FK__Assigment__Emplo__4D94879B" Association="Self.FK__Assigment__Emplo__4D94879B">
+            <End Role="Employees" EntitySet="Employees" />
+            <End Role="Assigments" EntitySet="Assigments" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Assigment__Proje__4E88ABD4" Association="Self.FK__Assigment__Proje__4E88ABD4">
+            <End Role="Projects" EntitySet="Projects" />
+            <End Role="Assigments" EntitySet="Assigments" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище PRACTIC1ModelContainer" CdmEntityContainer="PRACTIC1Entities">
+          <EntitySetMapping Name="Assigments">
+            <EntityTypeMapping TypeName="PRACTIC1Model.Assigments">
+              <MappingFragment StoreEntitySet="Assigments">
+                <ScalarProperty Name="ID_Assigment" ColumnName="ID_Assigment" />
+                <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+                <ScalarProperty Name="Project_ID" ColumnName="Project_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="PRACTIC1Model.Employees">
+              <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="ID_Employee" ColumnName="ID_Employee" />
+                <ScalarProperty Name="Name1" ColumnName="Name1" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Projects">
+            <EntityTypeMapping TypeName="PRACTIC1Model.Projects">
+              <MappingFragment StoreEntitySet="Projects">
+                <ScalarProperty Name="ID_Project" ColumnName="ID_Project" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Dedcription" ColumnName="Dedcription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

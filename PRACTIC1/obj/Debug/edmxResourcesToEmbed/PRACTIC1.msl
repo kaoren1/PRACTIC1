@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище PRACTIC1ModelContainer" CdmEntityContainer="PRACTIC1Entities">
+    <EntitySetMapping Name="Assigments">
+      <EntityTypeMapping TypeName="PRACTIC1Model.Assigments">
+        <MappingFragment StoreEntitySet="Assigments">
+          <ScalarProperty Name="ID_Assigment" ColumnName="ID_Assigment" />
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="Project_ID" ColumnName="Project_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="PRACTIC1Model.Employees">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="ID_Employee" ColumnName="ID_Employee" />
+          <ScalarProperty Name="Name1" ColumnName="Name1" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projects">
+      <EntityTypeMapping TypeName="PRACTIC1Model.Projects">
+        <MappingFragment StoreEntitySet="Projects">
+          <ScalarProperty Name="ID_Project" ColumnName="ID_Project" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Dedcription" ColumnName="Dedcription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
