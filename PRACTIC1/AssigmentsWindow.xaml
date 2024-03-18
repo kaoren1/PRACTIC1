@@ -11,21 +11,14 @@
             <RowDefinition Height="30"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <Frame Grid.Row="1" x:Name="Frame"></Frame>
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="DataSet" Grid.Column="0" Content="Вывод с помощью DataSet" Style="{StaticResource MaterialDesignOutlinedLightButton}" ToolTip="MaterialDesignOutlinedButton" VerticalAlignment="Center" Click="DataSet_Click"/>
-            <Button x:Name="EF" Grid.Column="1" Content="Вывод с помощью EF" Style="{StaticResource MaterialDesignOutlinedLightButton}" ToolTip="MaterialDesignOutlinedButton" VerticalAlignment="Center" Click="EF_Click"/>
+            <Button x:Name="DataSet" Grid.Column="0" Content="Вывод и изменение с помощью DataSet" Style="{StaticResource MaterialDesignOutlinedLightButton}" ToolTip="MaterialDesignOutlinedButton" VerticalAlignment="Center" Click="DataSet_Click"/>
+            <Button x:Name="EF" Grid.Column="1" Content="Вывод и изменение с помощью EF" Style="{StaticResource MaterialDesignOutlinedLightButton}" ToolTip="MaterialDesignOutlinedButton" VerticalAlignment="Center" Click="EF_Click"/>
         </Grid>
-        <DataGrid AutoGenerateColumns="False" x:Name="AssigmentTable" Grid.Row="1">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Номер" Binding="{Binding ID_Assigment}" />
-                <DataGridTextColumn Header="Название" Binding="{Binding Employee_ID}" />
-                <DataGridTextColumn Header="Описание" Binding="{Binding Project_ID}" />
-            </DataGrid.Columns>
-            >
-        </DataGrid>
     </Grid>
 </Window>

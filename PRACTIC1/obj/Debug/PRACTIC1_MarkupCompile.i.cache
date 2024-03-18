@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Ярослав\source\repos\PRACTIC1\PRACTIC1\App.xaml
-41055263883
+1060214110
 2-666086119
-16-761350931
+22324247014
 211822191006
-AssigmentsWindow.xaml;EmployeeWindow.xaml;MainWindow.xaml;ProjectsWindow.xaml;
+AssigmentPage.xaml;AssigmentPageEF.xaml;AssigmentsWindow.xaml;EmployeePage.xaml;EmployeePageEF.xaml;EmployeeWindow.xaml;MainWindow.xaml;ProjectPage.xaml;ProjectPageEF.xaml;ProjectsWindow.xaml;
 
 False
 

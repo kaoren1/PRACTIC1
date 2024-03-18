@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-using PRACTIC1.PRACTIC1DataSetTableAdapters; //Подключение
+using PRACTIC1.PRACTIC1DataSetTableAdapters;
 
 namespace PRACTIC1
 {
@@ -25,6 +25,7 @@ namespace PRACTIC1
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = " ";
 
         }
 

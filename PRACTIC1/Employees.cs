@@ -27,6 +27,6 @@ namespace PRACTIC1
         public string Department { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Assigments> Assigments {private get; set; }
+        public virtual ICollection<Assigments> Assigments { get; set; }
     }
 }

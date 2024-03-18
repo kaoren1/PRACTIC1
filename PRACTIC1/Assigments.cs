@@ -18,7 +18,7 @@ namespace PRACTIC1
         public int Employee_ID { get; set; }
         public int Project_ID { get; set; }
     
-        public virtual Employees Employees {private get; set; }
-        public virtual Projects Projects {private get; set; }
+        public virtual Employees Employees { get; set; }
+        public virtual Projects Projects { get; set; }
     }
 }
