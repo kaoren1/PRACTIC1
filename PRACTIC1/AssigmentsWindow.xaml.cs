@@ -25,20 +25,26 @@ namespace PRACTIC1
         public AssigmentsWindow()
         {
             InitializeComponent();
+            this.Title = "Проекты работников";
         }
 
         private void DataSet_Click(object sender, RoutedEventArgs e)
         {
-            AssigmentTable.ItemsSource = null;
-            AssigmentTable.Items.Clear();
-            AssigmentTable.ItemsSource = assigmentsTableAdapter.GetData();
+            AssigmentPage page = new AssigmentPage();
+            page.AssigmentTable.ItemsSource = null;
+            page.AssigmentTable.ItemsSource = null;
+            page.AssigmentTable.Items.Clear();
+            page.AssigmentTable.ItemsSource = assigmentsTableAdapter.GetData();
+            Frame.Content = page;
         }
 
         private void EF_Click(object sender, RoutedEventArgs e)
         {
-            AssigmentTable.ItemsSource = null;
-            AssigmentTable.Items.Clear();
-            AssigmentTable.ItemsSource = p.Assigments.ToList();
+            AssigmentPageEF page = new AssigmentPageEF();
+            page.AssigmentTable.ItemsSource = null;
+            page.AssigmentTable.Items.Clear();
+            page.AssigmentTable.ItemsSource = p.Assigments.ToList();
+            Frame.Content = page;
         }
     }
 }

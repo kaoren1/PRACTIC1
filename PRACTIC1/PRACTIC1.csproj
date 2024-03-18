@@ -75,7 +75,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="AssigmentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AssigmentPageEF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AssigmentsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmployeePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmployeePageEF.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -91,11 +107,23 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="AssigmentPage.xaml.cs">
+      <DependentUpon>AssigmentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AssigmentPageEF.xaml.cs">
+      <DependentUpon>AssigmentPageEF.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Assigments.cs">
       <DependentUpon>PRACTIC1.tt</DependentUpon>
     </Compile>
     <Compile Include="AssigmentsWindow.xaml.cs">
       <DependentUpon>AssigmentsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeePage.xaml.cs">
+      <DependentUpon>EmployeePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeePageEF.xaml.cs">
+      <DependentUpon>EmployeePageEF.xaml</DependentUpon>
     </Compile>
     <Compile Include="Employees.cs">
       <DependentUpon>PRACTIC1.tt</DependentUpon>
@@ -107,6 +135,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ProjectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProjectPageEF.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ProjectsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -132,6 +168,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PRACTIC1DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectPage.xaml.cs">
+      <DependentUpon>ProjectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectPageEF.xaml.cs">
+      <DependentUpon>ProjectPageEF.xaml</DependentUpon>
     </Compile>
     <Compile Include="Projects.cs">
       <DependentUpon>PRACTIC1.tt</DependentUpon>

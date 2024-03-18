@@ -35,3 +35,15 @@ C:\Users\Ярослав\source\repos\PRACTIC1\PRACTIC1\bin\Debug\EntityFramework
 C:\Users\Ярослав\source\repos\PRACTIC1\PRACTIC1\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Ярослав\source\repos\PRACTIC1\PRACTIC1\bin\Debug\ru\EntityFramework.resources.dll
 C:\Users\Ярослав\source\repos\PRACTIC1\PRACTIC1\obj\Debug\PRACTIC1_Content.g.cs
+C:\Users\Ярослав\source\repos\PRACTIC1\PRACTIC1\obj\Debug\AssigmentPage.g.cs
+C:\Users\Ярослав\source\repos\PRACTIC1\PRACTIC1\obj\Debug\EmployeePage.g.cs
+C:\Users\Ярослав\source\repos\PRACTIC1\PRACTIC1\obj\Debug\ProjectPage.g.cs
+C:\Users\Ярослав\source\repos\PRACTIC1\PRACTIC1\obj\Debug\AssigmentPage.baml
+C:\Users\Ярослав\source\repos\PRACTIC1\PRACTIC1\obj\Debug\EmployeePage.baml
+C:\Users\Ярослав\source\repos\PRACTIC1\PRACTIC1\obj\Debug\ProjectPage.baml
+C:\Users\Ярослав\source\repos\PRACTIC1\PRACTIC1\obj\Debug\AssigmentPageEF.g.cs
+C:\Users\Ярослав\source\repos\PRACTIC1\PRACTIC1\obj\Debug\EmployeePageEF.g.cs
+C:\Users\Ярослав\source\repos\PRACTIC1\PRACTIC1\obj\Debug\ProjectPageEF.g.cs
+C:\Users\Ярослав\source\repos\PRACTIC1\PRACTIC1\obj\Debug\AssigmentPageEF.baml
+C:\Users\Ярослав\source\repos\PRACTIC1\PRACTIC1\obj\Debug\EmployeePageEF.baml
+C:\Users\Ярослав\source\repos\PRACTIC1\PRACTIC1\obj\Debug\ProjectPageEF.baml

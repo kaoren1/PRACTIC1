@@ -26,20 +26,27 @@ namespace PRACTIC1
         public EmployeeWindow()
         {
             InitializeComponent();
+            this.Title = "Работники";
         }
 
         private void DataSet_Click(object sender, RoutedEventArgs e)
         {
-            EmployeeTable.ItemsSource = null;
-            EmployeeTable.Items.Clear();
-            EmployeeTable.ItemsSource = employeesTableAdapter.GetData();
+            AssigmentPage assigmentPage = new AssigmentPage();
+            EmployeePage page = new EmployeePage();
+            page.EmployeeTable.ItemsSource = null;
+            page.EmployeeTable.Items.Clear();
+            page.EmployeeTable.ItemsSource = employeesTableAdapter.GetData();
+            Frame.Content = page;
         }
 
         private void EF_Click(object sender, RoutedEventArgs e)
         {
-            EmployeeTable.ItemsSource = null;
-            EmployeeTable.Items.Clear();
-            EmployeeTable.ItemsSource = p.Employees.ToList();
+            EmployeePageEF page = new EmployeePageEF(); 
+            page.EmployeeTable.ItemsSource = null;
+            page.EmployeeTable.Items.Clear();
+            page.EmployeeTable.ItemsSource = p.Employees.ToList();
+            Frame.Content = page;
         }
+
     }
 }

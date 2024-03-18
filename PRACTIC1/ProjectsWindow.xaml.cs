@@ -25,20 +25,25 @@ namespace PRACTIC1
         public ProjectsWindow()
         {
             InitializeComponent();
+            this.Title = "Проекты";
         }
 
         private void DataSet_Click(object sender, RoutedEventArgs e)
         {
-            ProjectTable.ItemsSource = null;
-            ProjectTable.Items.Clear();
-            ProjectTable.ItemsSource = projectsTableAdapter.GetData();
+            ProjectPage page = new ProjectPage();
+            page.ProjectTable.ItemsSource = null;
+            page.ProjectTable.Items.Clear();
+            page.ProjectTable.ItemsSource = projectsTableAdapter.GetData();
+            Frame.Content = page;
         }
 
         private void EF_Click(object sender, RoutedEventArgs e)
         {
-            ProjectTable.ItemsSource = null;
-            ProjectTable.Items.Clear();
-            ProjectTable.ItemsSource = p.Projects.ToList();
+            ProjectPageEF page = new ProjectPageEF();
+            page.ProjectTable.ItemsSource = null;
+            page.ProjectTable.Items.Clear();
+            page.ProjectTable.ItemsSource = p.Projects.ToList();
+            Frame.Content = page;
         }
     }
 }
