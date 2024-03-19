@@ -10,6 +10,7 @@
         <EntityTypeShape EntityType="PRACTIC1Model.Projects" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
         <AssociationConnector Association="PRACTIC1Model.FK__Assigment__Emplo__4D94879B" ManuallyRouted="false" />
         <AssociationConnector Association="PRACTIC1Model.FK__Assigment__Proje__4E88ABD4" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="PRACTIC1Model.SelectView" Width="1.5" PointX="3.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

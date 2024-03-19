@@ -1,0 +1,15 @@
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC2T\PRACTIC2T\bin\Debug\PRACTIC2T.exe.config
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC2T\PRACTIC2T\bin\Debug\PRACTIC2T.exe
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC2T\PRACTIC2T\bin\Debug\PRACTIC2T.pdb
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC2T\PRACTIC2T\obj\Debug\PRACTIC2T.csproj.AssemblyReference.cache
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC2T\PRACTIC2T\obj\Debug\MainWindow.g.cs
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC2T\PRACTIC2T\obj\Debug\App.g.cs
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC2T\PRACTIC2T\obj\Debug\PRACTIC2T_MarkupCompile.cache
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC2T\PRACTIC2T\obj\Debug\PRACTIC2T_MarkupCompile.lref
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC2T\PRACTIC2T\obj\Debug\MainWindow.baml
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC2T\PRACTIC2T\obj\Debug\PRACTIC2T.g.resources
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC2T\PRACTIC2T\obj\Debug\PRACTIC2T.Properties.Resources.resources
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC2T\PRACTIC2T\obj\Debug\PRACTIC2T.csproj.GenerateResource.cache
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC2T\PRACTIC2T\obj\Debug\PRACTIC2T.csproj.CoreCompileInputs.cache
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC2T\PRACTIC2T\obj\Debug\PRACTIC2T.exe
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC2T\PRACTIC2T\obj\Debug\PRACTIC2T.pdb

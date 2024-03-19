@@ -26,6 +26,24 @@
     <Property Name="Title" Type="varchar" MaxLength="80" Nullable="false" />
     <Property Name="Dedcription" Type="text" Nullable="false" />
   </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "PRACTIC1.dbo.SelectView" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="SelectView">
+    <Key>
+      <PropertyRef Name="Surname" />
+      <PropertyRef Name="Name1" />
+      <PropertyRef Name="Position" />
+      <PropertyRef Name="Department" />
+      <PropertyRef Name="Title" />
+      <PropertyRef Name="Dedcription" />
+    </Key>
+    <Property Name="Surname" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="Name1" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="Position" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="Department" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="Dedcription" Type="text" Nullable="false" />
+  </EntityType>
   <Association Name="FK__Assigment__Emplo__4D94879B">
     <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
     <End Role="Assigments" Type="Self.Assigments" Multiplicity="*" />
@@ -54,6 +72,16 @@
     <EntitySet Name="Assigments" EntityType="Self.Assigments" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Projects" EntityType="Self.Projects" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SelectView" EntityType="Self.SelectView" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [SelectView].[Surname] AS [Surname], 
+    [SelectView].[Name1] AS [Name1], 
+    [SelectView].[Position] AS [Position], 
+    [SelectView].[Department] AS [Department], 
+    [SelectView].[Title] AS [Title], 
+    [SelectView].[Dedcription] AS [Dedcription]
+    FROM [dbo].[SelectView] AS [SelectView]</DefiningQuery>
+    </EntitySet>
     <AssociationSet Name="FK__Assigment__Emplo__4D94879B" Association="Self.FK__Assigment__Emplo__4D94879B">
       <End Role="Employees" EntitySet="Employees" />
       <End Role="Assigments" EntitySet="Assigments" />

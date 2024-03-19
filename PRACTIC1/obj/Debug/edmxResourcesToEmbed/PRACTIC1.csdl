@@ -66,5 +66,22 @@
       <End Role="Projects" EntitySet="Projects" />
       <End Role="Assigments" EntitySet="Assigments" />
     </AssociationSet>
+    <EntitySet Name="SelectView" EntityType="PRACTIC1Model.SelectView" />
   </EntityContainer>
+  <EntityType Name="SelectView">
+    <Key>
+      <PropertyRef Name="Surname" />
+      <PropertyRef Name="Name1" />
+      <PropertyRef Name="Position" />
+      <PropertyRef Name="Department" />
+      <PropertyRef Name="Title" />
+      <PropertyRef Name="Dedcription" />
+    </Key>
+    <Property Name="Surname" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="Name1" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="Position" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="Department" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="Dedcription" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

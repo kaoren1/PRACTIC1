@@ -22,6 +22,8 @@ namespace PRACTIC1
     /// </summary>
     public partial class MainWindow : Window
     {
+        public new string Name { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -45,6 +47,26 @@ namespace PRACTIC1
         {
             AssigmentsWindow A = new AssigmentsWindow();
             A.Show();
+        }
+
+        private void FullDataSet_Click(object sender, RoutedEventArgs e)
+        {
+            EmployeesTableAdapter employeesTableAdapter = new EmployeesTableAdapter();
+            FullTableWindow f = new FullTableWindow();
+            f.FTable.ItemsSource = null;
+            f.FTable.Items.Clear();
+            f.FTable.ItemsSource = employeesTableAdapter.GetDataBy3();
+            f.Show();
+        }
+        
+        private void FullEF_Click(object sender, RoutedEventArgs e)
+        {
+            FullTableWindow f = new FullTableWindow();
+            PRACTIC1Entities p = new PRACTIC1Entities();
+            f.FTable.ItemsSource = null;
+            f.FTable.Items.Clear();
+            f.FTable.ItemsSource = p.SelectView.ToList();
+            f.Show();
         }
     }
 }

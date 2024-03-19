@@ -2180,9 +2180,11 @@ SELECT ID_Employee, Name1, Surname, Position, Department FROM Employees WHERE (I
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID_Employee", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID_Employee", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT ID_Employee\r\nFROM     Employees\r\nWHERE  (Surname = @Surname)";
+            this._commandCollection[2].CommandText = @"SELECT Employees.Surname, Employees.Name1, Employees.Position, Employees.Department, Projects.Title, Projects.Dedcription
+FROM     Employees INNER JOIN
+                  Assigments ON Assigments.Employee_ID = Employees.ID_Employee INNER JOIN
+                  Projects ON Projects.ID_Project = Assigments.Project_ID";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Surname", global::System.Data.SqlDbType.VarChar, 60, global::System.Data.ParameterDirection.Input, 0, 0, "Surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
             this._commandCollection[3].CommandText = "INSERT INTO Employees\r\n                  (Name1, Surname, Position, Department)\r\n" +
@@ -2232,14 +2234,8 @@ SELECT ID_Employee, Name1, Surname, Position, Department FROM Employees WHERE (I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(PRACTIC1DataSet.EmployeesDataTable dataTable, string Surname) {
+        public virtual int FillBy(PRACTIC1DataSet.EmployeesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            if ((Surname == null)) {
-                throw new global::System.ArgumentNullException("Surname");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Surname));
-            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -2251,14 +2247,8 @@ SELECT ID_Employee, Name1, Surname, Position, Department FROM Employees WHERE (I
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual PRACTIC1DataSet.EmployeesDataTable GetDataBy3(string Surname) {
+        public virtual PRACTIC1DataSet.EmployeesDataTable GetDataBy3() {
             this.Adapter.SelectCommand = this.CommandCollection[2];
-            if ((Surname == null)) {
-                throw new global::System.ArgumentNullException("Surname");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Surname));
-            }
             PRACTIC1DataSet.EmployeesDataTable dataTable = new PRACTIC1DataSet.EmployeesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

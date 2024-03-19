@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище PRACTIC1Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище PRACTIC1Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Assigments">
           <Key>
             <PropertyRef Name="ID_Assigment" />
@@ -28,6 +28,24 @@
             <PropertyRef Name="ID_Project" />
           </Key>
           <Property Name="ID_Project" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="Dedcription" Type="text" Nullable="false" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "PRACTIC1.dbo.SelectView" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="SelectView">
+          <Key>
+            <PropertyRef Name="Surname" />
+            <PropertyRef Name="Name1" />
+            <PropertyRef Name="Position" />
+            <PropertyRef Name="Department" />
+            <PropertyRef Name="Title" />
+            <PropertyRef Name="Dedcription" />
+          </Key>
+          <Property Name="Surname" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="Name1" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="Position" Type="varchar" MaxLength="60" Nullable="false" />
+          <Property Name="Department" Type="varchar" MaxLength="60" Nullable="false" />
           <Property Name="Title" Type="varchar" MaxLength="80" Nullable="false" />
           <Property Name="Dedcription" Type="text" Nullable="false" />
         </EntityType>
@@ -59,6 +77,16 @@
           <EntitySet Name="Assigments" EntityType="Self.Assigments" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Projects" EntityType="Self.Projects" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SelectView" EntityType="Self.SelectView" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [SelectView].[Surname] AS [Surname], 
+    [SelectView].[Name1] AS [Name1], 
+    [SelectView].[Position] AS [Position], 
+    [SelectView].[Department] AS [Department], 
+    [SelectView].[Title] AS [Title], 
+    [SelectView].[Dedcription] AS [Dedcription]
+    FROM [dbo].[SelectView] AS [SelectView]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK__Assigment__Emplo__4D94879B" Association="Self.FK__Assigment__Emplo__4D94879B">
             <End Role="Employees" EntitySet="Employees" />
             <End Role="Assigments" EntitySet="Assigments" />
@@ -68,8 +96,7 @@
             <End Role="Assigments" EntitySet="Assigments" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PRACTIC1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -139,7 +166,24 @@
             <End Role="Projects" EntitySet="Projects" />
             <End Role="Assigments" EntitySet="Assigments" />
           </AssociationSet>
+          <EntitySet Name="SelectView" EntityType="PRACTIC1Model.SelectView" />
         </EntityContainer>
+        <EntityType Name="SelectView">
+          <Key>
+            <PropertyRef Name="Surname" />
+            <PropertyRef Name="Name1" />
+            <PropertyRef Name="Position" />
+            <PropertyRef Name="Department" />
+            <PropertyRef Name="Title" />
+            <PropertyRef Name="Dedcription" />
+          </Key>
+          <Property Name="Surname" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Name1" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Position" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Department" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Dedcription" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -172,6 +216,18 @@
                 <ScalarProperty Name="ID_Project" ColumnName="ID_Project" />
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="Dedcription" ColumnName="Dedcription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SelectView">
+            <EntityTypeMapping TypeName="PRACTIC1Model.SelectView">
+              <MappingFragment StoreEntitySet="SelectView">
+                <ScalarProperty Name="Dedcription" ColumnName="Dedcription" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Name1" ColumnName="Name1" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

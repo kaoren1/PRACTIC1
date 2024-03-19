@@ -12,10 +12,14 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <TextBlock FontSize="24" x:Name="Text1" Text="Выберите таблицу:" Grid.Row="0" VerticalAlignment="Center"/>
         <Button x:Name="ButtonE" Grid.Row="1" Content="Работники" Style="{StaticResource MaterialDesignOutlinedLightButton}" ToolTip="MaterialDesignOutlinedButton" VerticalAlignment="Center" Click="ButtonE_Click"/>
         <Button x:Name="ButtonP" Grid.Row="2" Content="Проекты" Style="{StaticResource MaterialDesignOutlinedLightButton}" ToolTip="MaterialDesignOutlinedButton" VerticalAlignment="Center" Click="ButtonP_Click"/>
         <Button x:Name="ButtonA" Grid.Row="3" Content="Проекты работников" Style="{StaticResource MaterialDesignOutlinedLightButton}" ToolTip="MaterialDesignOutlinedButton" VerticalAlignment="Center" Click="ButtonA_Click"/>
+        <Button x:Name="FullDataSet" Grid.Row="4" Content="Полная таблица DataSet" Style="{StaticResource MaterialDesignOutlinedLightButton}" ToolTip="MaterialDesignOutlinedButton" VerticalAlignment="Center" Click="FullDataSet_Click"></Button>
+        <Button x:Name="FullEF" Grid.Row="5" Content="Полная таблица EF" Style="{StaticResource MaterialDesignOutlinedLightButton}" ToolTip="MaterialDesignOutlinedButton" VerticalAlignment="Center" Click="FullEF_Click"></Button>
     </Grid>
 </Window>

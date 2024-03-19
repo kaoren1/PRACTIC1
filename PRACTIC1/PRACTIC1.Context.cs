@@ -28,5 +28,6 @@ namespace PRACTIC1
         public virtual DbSet<Assigments> Assigments { get; set; }
         public virtual DbSet<Employees> Employees { get; set; }
         public virtual DbSet<Projects> Projects { get; set; }
+        public virtual DbSet<SelectView> SelectView { get; set; }
     }
 }
