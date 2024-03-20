@@ -98,3 +98,15 @@ C:\Users\Ярослав\Source\Repos\PRACTIC2F\PRACTIC1\obj\Debug\PRACTIC1.exe
 C:\Users\Ярослав\Source\Repos\PRACTIC2F\PRACTIC1\obj\Debug\PRACTIC1.pdb
 C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC1\obj\Debug\FullTableWindow.g.cs
 C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC1\obj\Debug\FullTableWindow.baml
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC1\obj\Debug\SearchAssigmentsDTPage.g.cs
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC1\obj\Debug\SearchAssigmentsEFPage.g.cs
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC1\obj\Debug\SearchEmployeeDTPage.g.cs
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC1\obj\Debug\SearchEmployeeEFPage.g.cs
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC1\obj\Debug\SearchProjectsDTPage.g.cs
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC1\obj\Debug\SearchProjectsEFPage.g.cs
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC1\obj\Debug\SearchAssigmentsDTPage.baml
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC1\obj\Debug\SearchAssigmentsEFPage.baml
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC1\obj\Debug\SearchEmployeeDTPage.baml
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC1\obj\Debug\SearchEmployeeEFPage.baml
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC1\obj\Debug\SearchProjectsDTPage.baml
+C:\Users\Ярослав\source\repos\PRACTIC2F\PRACTIC1\obj\Debug\SearchProjectsEFPage.baml

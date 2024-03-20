@@ -45,5 +45,17 @@ namespace PRACTIC1
             page.ProjectTable.ItemsSource = p.Projects.ToList();
             Frame.Content = page;
         }
+
+        private void SearchDataSet_Click(object sender, RoutedEventArgs e)
+        {
+            SearchProjectsDTPage page = new SearchProjectsDTPage();
+            Frame.Content = page;
+        }
+
+        private void SearchEF_Click(object sender, RoutedEventArgs e)
+        {
+            SearchProjectsEFPage page = new SearchProjectsEFPage();
+            Frame.Content = page;
+        }
     }
 }

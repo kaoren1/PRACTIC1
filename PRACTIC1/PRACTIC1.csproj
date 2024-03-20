@@ -78,6 +78,24 @@
     <Compile Include="PRACTIC1DataSet.cs">
       <DependentUpon>PRACTIC1DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SearchAssigmentsDTPage.xaml.cs">
+      <DependentUpon>SearchAssigmentsDTPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchAssigmentsEFPage.xaml.cs">
+      <DependentUpon>SearchAssigmentsEFPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEmployeeDTPage.xaml.cs">
+      <DependentUpon>SearchEmployeeDTPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchEmployeeEFPage.xaml.cs">
+      <DependentUpon>SearchEmployeeEFPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchProjectsDTPage.xaml.cs">
+      <DependentUpon>SearchProjectsDTPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchProjectsEFPage.xaml.cs">
+      <DependentUpon>SearchProjectsEFPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SelectView.cs">
       <DependentUpon>PRACTIC1.tt</DependentUpon>
     </Compile>
@@ -157,6 +175,30 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ProjectsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchAssigmentsDTPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchAssigmentsEFPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchEmployeeDTPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchEmployeeEFPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchProjectsDTPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SearchProjectsEFPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

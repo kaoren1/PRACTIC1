@@ -7,9 +7,12 @@
     }
 }
 
-namespace PRACTIC1.PRACTIC1DataSetTableAdapters {
-    
-    
+namespace PRACTIC1.PRACTIC1DataSetTableAdapters
+{
+    partial class ProjectsTableAdapter
+    {
+    }
+
     public partial class EmployeesTableAdapter {
     }
 }

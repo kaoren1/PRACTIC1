@@ -48,5 +48,16 @@ namespace PRACTIC1
             Frame.Content = page;
         }
 
+        private void SearchDataSet_Click(object sender, RoutedEventArgs e)
+        {
+            SearchEmployeeDTPage page = new SearchEmployeeDTPage();
+            Frame.Content = page;
+        }
+
+        private void SearchEF_Click(object sender, RoutedEventArgs e)
+        {
+            SearchEmployeeEFPage page = new SearchEmployeeEFPage();
+            Frame.Content = page;
+        }
     }
 }
